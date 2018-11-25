@@ -24,13 +24,16 @@ function attachEvents (){
     function appendMessages(messages){
         let keys = Object.keys(messages);
         keys.sort((a, b) => messages[a].timestamp - messages[b].timestamp);
-
+		let result = '';
         for (const key of keys) {
             let message = messages[key].content;
             let author = messages[key].author;
-            let result = `${author}: ${message}\n`;
-            messageArea.append(result);
+            result += `${author}: ${message}\n`;          
         }
+		messageArea.append(result);
+		$(messageArea).animate({
+            scrollTop:$(messageArea)[0].scrollHeight - $(messageArea).height()
+        });     
     }
 
     function createMessage(){
