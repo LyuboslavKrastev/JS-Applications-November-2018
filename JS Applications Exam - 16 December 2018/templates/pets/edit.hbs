@@ -1,0 +1,15 @@
+<section class="detailsMyPet">
+    <h3>{{name}}</h3>
+    <p>Pet counter: <i class="fas fa-heart"></i> {{likes}}</p>
+    <p class="img"><img src="{{imageURL}}"></p>
+    <input type="hidden" name="petId" value="{{id}}" />
+    <input type="hidden" name="name" value="{{name}}" />
+    <input type="hidden" name="category" value="{{category}}" />
+    <input type="hidden" name="image" value="{{imageURL}}" />
+    <input type="hidden" name="likes" value="{{likes}}" />
+
+    <form action="#/mypets/edit" method="POST">
+        <textarea type="text" name="description">{{description}}</textarea>
+        <button class="button"> Save</button>
+    </form>
+</section>

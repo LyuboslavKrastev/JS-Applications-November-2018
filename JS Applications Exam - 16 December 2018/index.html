@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+
+<body>
+        <header id="site-header">
+                <nav class="navbar">    
+                    <section class="navbar-dashboard">
+                        <div class="first-bar">
+                            <a href="#/dashboard">Dashboard</a>
+                            <a class="button" href="#/mypets">My Pets</a>
+                            <a class="button" href="#/add">Add Pet</a>
+                        </div>
+                        <div class="second-bar">
+                            <ul>
+                                <li id="welcome-message">Welcome, {{username}}!</li>
+                                <li><a href="#/logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="navbar-anonymous">
+                        <ul>
+                            <li><a href="#/register"><i class="fas fa-user-plus"></i> Register</a></li>
+                            <li><a href="#/login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                        </ul>
+                    </section>
+                </nav>
+            </header>
+    <div id="container">
+
+    </div>
+    <footer id="site-footer">
+            <p>@PetMyPet</p>
+        </footer>
+    <div id="notifications">
+        <div id="loadingBox" class="notification">
+            <span>Loading …</span>
+        </div>
+        <div id="infoBox" class="notification">
+            <span>Info</span>
+        </div>
+        <div id="errorBox" class="notification">
+            <span>Error</span>
+        </div>
+    </div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="node_modules/sammy/lib/sammy.js"></script>
+    <script src="node_modules/sammy/lib/plugins/sammy.handlebars.js"></script>
+    <script src="./scripts/remote.js"></script>
+    <script src="./scripts/notify.js"></script>
+    <script src="scripts/services/auth-service.js"></script>
+    <script src="scripts/services/pets-service.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/handlers/auth-handler.js"></script>
+    <script src="scripts/handlers/pets-handler.js"></script>
+</body>
+</html>
